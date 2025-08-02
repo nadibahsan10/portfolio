@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #ff6500;
+  --color-background: #0b192c;
+}
+body {
+  @apply px-6 pt-6 bg-black;
+}
+@layer utilities {
+  .container {
+    @apply mx-auto px-2;
+  }
+}
+@layer components {
+  .menu {
+    @apply overflow-hidden font-semibold shadow-lg transition-all duration-300;
+    position: relative;
+    width: 120px;
+    height: 48px;
+    text-align: center;
+  }
+
+  .menu::before,
+  .menu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease;
+    font-weight: 600;
+  }
+
+  .menu::before {
+    content: "Menu";
+    background-color: #ff6500;
+    color: #000000;
+    z-index: 1;
+  }
+
+  .menu::after {
+    content: "Close";
+    background-color: #0b192c;
+    color: #ffffff;
+    top: 100%;
+    z-index: 0;
+  }
+
+  .menu.open::before {
+    top: -100%;
+  }
+
+  .menu.open::after {
+    top: 0;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
