@@ -19,48 +19,50 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <header className="flex items-center justify-between p-4 relative">
-      <img src={logo} className="h-12" alt="logo" />
+    <div className="fixed w-full top-10 px-10  z-20">
+      <header className="flex items-center justify-between relative">
+        <img src={logo} className="h-12" alt="logo" />
 
-      <button
-        className={`menu z-10 cursor-pointer ${isOpen ? "open" : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span className="sr-only">{isOpen ? "Close" : "Menu"}</span>
-      </button>
+        <button
+          className={`menu z-10 cursor-pointer ${isOpen ? "open" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="sr-only">{isOpen ? "Close" : "Menu"}</span>
+        </button>
 
-      {/* Animated Menu Panel */}
-      <div
-        className={`absolute top-0 right-0   h-100 w-80 px-10 pt-6 bg-primary overflow-hidden  shadow-xl transition-all duration-600 origin-top z-9 ${
-          isOpen ? "opacity-100! scale-100!" : " h-0! w-0! opacity-0 "
-        }`}
-      >
-        {showContent && (
-          <ul className="mt-15 flex flex-col gap-4 text-white">
-            {["Home", "About Me", "Projects", "My Stack", "Contact"].map(
-              (item, index) => (
-                <li
-                  key={item}
-                  className={` cursor-pointer
+        {/* Animated Menu Panel */}
+        <div
+          className={`absolute top-[-10px] right-[-10px]   h-100 w-80 px-10 pt-6 bg-primary overflow-hidden  shadow-xl transition-all duration-600 origin-top z-9 ${
+            isOpen ? "opacity-100! scale-100!" : " h-0! w-0! opacity-0 "
+          }`}
+        >
+          {showContent && (
+            <ul className="mt-15 flex flex-col gap-4 text-white">
+              {["Home", "About Me", "Projects", "My Stack", "Contact"].map(
+                (item, index) => (
+                  <li
+                    key={item}
+                    className={` cursor-pointer
             text-4xl opacity-0 translate-y-4
             animate-fadeInUp
             animation-delay-[${
               index * 150
             }ms] hover:scale-110 hover:text-black transition-all duration-200
           `}
-                  style={{
-                    animation: `fadeInUp 0.5s ease forwards`,
-                    animationDelay: `${index * 150}ms`,
-                  }}
-                >
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-        )}
-      </div>
-    </header>
+                    style={{
+                      animation: `fadeInUp 0.5s ease forwards`,
+                      animationDelay: `${index * 150}ms`,
+                    }}
+                  >
+                    {item}
+                  </li>
+                )
+              )}
+            </ul>
+          )}
+        </div>
+      </header>
+    </div>
   );
 };
 
