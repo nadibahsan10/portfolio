@@ -38,26 +38,33 @@ const Header = () => {
         >
           {showContent && (
             <ul className="mt-15 flex flex-col gap-4 text-white">
-              {["Home", "About Me", "My Stack", "Projects", "Contact"].map(
-                (item, index) => (
-                  <li
-                    key={item}
-                    className={` cursor-pointer
-            text-4xl opacity-0 translate-y-4
-            animate-fadeInUp
-            animation-delay-[${
-              index * 150
-            }ms] hover:scale-110 hover:text-black transition-all duration-200
-          `}
-                    style={{
-                      animation: `fadeInUp 0.5s ease forwards`,
-                      animationDelay: `${index * 150}ms`,
-                    }}
-                  >
-                    {item}
-                  </li>
-                )
-              )}
+              {[
+                { label: "Home", id: "home" },
+                { label: "About Me", id: "about" },
+                { label: "My Stack", id: "stack" },
+                { label: "Projects", id: "projects" },
+                { label: "Contact", id: "contact" },
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className={`cursor-pointer text-4xl opacity-0 translate-y-4 animate-fadeInUp animation-delay-[${
+                    index * 150
+                  }ms] hover:scale-110 hover:text-black transition-all duration-200`}
+                  style={{
+                    animation: `fadeInUp 0.5s ease forwards`,
+                    animationDelay: `${index * 150}ms`,
+                  }}
+                  onClick={() => {
+                    const section = document.getElementById(item.id);
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                    setIsOpen(false);
+                  }}
+                >
+                  {item.label}
+                </li>
+              ))}
             </ul>
           )}
         </div>

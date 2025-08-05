@@ -83,7 +83,7 @@ const toolsStack = [
 
 const Stack = () => {
   return (
-    <FadingSection className="container py-20">
+    <FadingSection className="container py-20" id="stack">
       <SectionHeader title="My Stack" />
       <div className="bg-black   text-gray-300 space-y-30 font-sans">
         {/* FRONTEND */}

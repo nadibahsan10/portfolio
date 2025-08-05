@@ -3,7 +3,7 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const FadingSection = ({ children, className = "" }) => {
+const FadingSection = ({ children, className = "", id = "" }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -25,6 +25,7 @@ const FadingSection = ({ children, className = "" }) => {
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       className={`transition-all ${className}`}
+      id={id}
     >
       {children}
     </motion.section>

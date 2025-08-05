@@ -34,7 +34,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <FadingSection className="container py-20">
+    <FadingSection className="container py-20" id="projects">
       <SectionHeader title="Projects" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {projects.map((project, index) => (
@@ -47,7 +47,7 @@ const Projects = () => {
             <h5 className="text-white flex items-start gap-2 text-2xl">
               {project.title}
             </h5>
-            <hh6 className="text-gray-400 items-center my-2 flex gap-3 text-sm flex-wrap">
+            <h6 className="text-gray-400 items-center my-2 flex gap-3 text-sm flex-wrap">
               {project.stack.map((tech, i) => (
                 <React.Fragment key={i}>
                   <span>{tech}</span>
@@ -56,7 +56,7 @@ const Projects = () => {
                   )}
                 </React.Fragment>
               ))}
-            </hh6>
+            </h6>
             <p className="text-gray-300 text-lg leading-[32px]">
               {project.des}
             </p>

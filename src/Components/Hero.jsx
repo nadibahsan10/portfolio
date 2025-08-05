@@ -43,7 +43,7 @@ const Hero = () => {
   }, [replay, devReply]);
 
   return (
-    <section className="pt-40 pb-20 lg:pt-30  xl:pt-20">
+    <section className="pt-40 pb-20 lg:pt-30  xl:pt-20" id="home">
       <div className="container ">
         <div className="mt-10">
           <div className="flex gap-4 justify-center items-center">

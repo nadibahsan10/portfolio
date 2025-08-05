@@ -17,7 +17,7 @@ const About = () => {
   });
 
   return (
-    <FadingSection className="container py-40 ">
+    <FadingSection className="container py-40 " id="about">
       <SectionHeader title="About Me" />
 
       <div className="text-gray-300 grid grid-cols-2 gap-10 items-center ">
