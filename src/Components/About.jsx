@@ -2,7 +2,7 @@ import React from "react";
 import SectionHeader from "./SectionHeader";
 const About = () => {
   return (
-    <div className="container pb-30 pt-30">
+    <div className="container min-h-screen py-40">
       <SectionHeader title="About Me" />
       <div className="grid grid-cols-2">
         <div className="text-white">
