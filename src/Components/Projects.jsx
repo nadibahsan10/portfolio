@@ -9,12 +9,14 @@ const projects = [
     title: "Telecure",
     stack: ["Nextjs", "Mongodb"],
     des: "Telecure is a full-stack telemedicine platform designed to connect patients with doctors remotely. It includes features like user authentication, appointment booking, real-time chat, and doctor management. Built with Next.js, MongoDB, and Tailwind CSS, Telecure aims to modernize healthcare access through a responsive, intuitive user interface.",
+    url: "https://github.com/nadibahsan10/telecure",
   },
   {
     id: 2,
     title: "UIU+",
     stack: ["ReactJs", "Expressjs", "MySQL"],
     des: "UIU+ is a university companion web app built for students of United International University (UIU). It helps students manage courses, view routines, submit assignments, and connect with faculty. Developed using React.js, Express.js, and MySQL, UIU+ streamlines academic workflows into a centralized platform.",
+    url: "https://github.com/nadibahsan10/frontend",
   },
   {
     id: 3,
@@ -40,7 +42,10 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={project.id} className=" project-card ">
             <div className="back">
-              <a className="super-button">
+              <a
+                className="super-button"
+                href={project.url ? project.url : "#"}
+              >
                 Go To Link <FiExternalLink />
               </a>
             </div>

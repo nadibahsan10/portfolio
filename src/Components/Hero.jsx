@@ -8,8 +8,40 @@ import { FaBehance } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import AutoPlay from "./AutoPlay";
 import { useScramble } from "use-scramble";
-
 import logo from "/logo.png";
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/md-nadib-ahsan-377178179/",
+    icon: <FaLinkedin />,
+    hoverColor: "#0077B5",
+  },
+  {
+    href: "https://github.com/nadibahsan10",
+    icon: <FaGithub />,
+    hoverColor: "#181717",
+  },
+  {
+    href: "https://www.behance.net/nadibahsan",
+    icon: <FaBehance />,
+    hoverColor: "#1769FF",
+  },
+  {
+    href: "https://leetcode.com/u/nadibahsan4/",
+    icon: <SiLeetcode />,
+    hoverColor: "#FFA116",
+  },
+  {
+    href: "https://nadibahsan10-portfolio.vercel.app/",
+    icon: (
+      <img
+        src={logo}
+        alt="Custom Logo"
+        className="h-[20px] sm:h-[24px] md:h-[40px]"
+      />
+    ),
+    hoverColor: "#FF6500",
+  },
+];
 const Hero = () => {
   const { ref: fullStackRef, replay } = useScramble({
     text: "Full_Stack",
@@ -87,48 +119,17 @@ const Hero = () => {
             </a>
           </div>
           <div className="flex items-center text-[20px] sm:text-[24px] md:text-[40px] text-white justify-center gap-5">
-            <a
-              href="https://www.linkedin.com/in/md-nadib-ahsan-377178179/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-800 hover:bg-[#0077B5] transition-all duration-300 p-4"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/nadibahsan10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-800 hover:bg-[#181717] transition-all duration-300 p-4"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.behance.net/nadibahsan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-800 hover:bg-[#1769FF] transition-all duration-300 p-4"
-            >
-              <FaBehance />
-            </a>
-            <a
-              href="https://leetcode.com/u/nadibahsan4/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-800 hover:bg-[#FFA116] transition-all duration-300 p-4"
-            >
-              <SiLeetcode />
-            </a>
-            <a
-              href="https://nadibahsan10-portfolio.vercel.app/"
-              className="bg-gray-800 hover:bg-[#FF6500] transition-all duration-300 p-4"
-            >
-              <img
-                src={logo}
-                alt="Custom Logo"
-                className="h-[20px] sm:h-[24px] md:h-[40px]"
-              />
-            </a>
+            {socialLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-gray-800 transition-all rounded-sm duration-300 p-4 hover:bg-[${item.hoverColor}]`}
+              >
+                {item.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>

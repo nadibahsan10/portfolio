@@ -20,7 +20,7 @@ body {
     @apply relative hover:scale-105 transition-all duration-150 border p-10 border-white hover:border-primary overflow-hidden;
   }
   .back {
-    @apply absolute h-full w-full bg-black/70 top-0 left-[-100%] transition-all duration-300 flex items-center justify-center;
+    @apply absolute h-full w-full bg-black/80 top-0 left-[-100%] transition-all duration-700 flex items-center justify-center;
   }
   .project-card:hover .back {
     @apply left-0;
@@ -33,11 +33,10 @@ body {
 }
 @layer components {
   .menu {
-    @apply overflow-hidden font-semibold shadow-lg transition-all duration-300;
+    @apply overflow-hidden rounded-sm! font-semibold shadow-lg transition-all duration-300;
     position: relative;
     width: 120px;
     height: 48px;
-    text-align: center;
   }
 
   .menu::before,
@@ -50,6 +49,7 @@ body {
     width: 100%;
     padding: 12px 24px;
     display: flex;
+    border-radius: 4px;
 
     align-items: center;
     justify-content: center;
@@ -169,4 +169,8 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+::-webkit-scrollbar {
+  @apply h-0 w-0;
 }

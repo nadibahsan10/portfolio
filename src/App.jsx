@@ -6,9 +6,11 @@ import Stack from "./Components/Stack";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import ScrollProgressBar from "./Components/Scroll";
 const App = () => {
   return (
-    <>
+    <main>
+      <ScrollProgressBar />
       <Header />
       <Hero />
       <About />
@@ -16,7 +18,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </main>
   );
 };
 

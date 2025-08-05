@@ -32,7 +32,7 @@ const Header = () => {
 
         {/* Animated Menu Panel */}
         <div
-          className={`absolute top-[-10px] right-[-10px]   h-100 w-80 px-10 pt-6 bg-primary overflow-hidden  shadow-xl transition-all duration-600 origin-top z-9 ${
+          className={`absolute top-[-10px] right-[-10px] rounded-sm  h-100 w-80 px-10 pt-6 bg-primary overflow-hidden  shadow-xl transition-all duration-600 origin-top z-9 ${
             isOpen ? "opacity-100! scale-100!" : " h-0! w-0! opacity-0 "
           }`}
         >
