@@ -3,14 +3,14 @@ import profile from "/profile.jpg";
 import { GoDownload } from "react-icons/go";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaBehance } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import AutoPlay from "./AutoPlay";
 import logo from "/logo.png";
 const Hero = () => {
   return (
-    <>
-      <div className="container pt-30">
+    <div>
+      <div className="container pt-15">
         <div className="mt-10">
           <img
             src={profile}
@@ -34,27 +34,54 @@ const Hero = () => {
             Resume <GoDownload />
           </a>
 
-          <div className="flex items-center text-[40px] text-white justify-center gap-5">
-            <div className="bg-gray-800 p-4">
+          <div className="flex items-center text-[20px] sm:text-[24px] md:text-[40px] text-white justify-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/md-nadib-ahsan-377178179/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 hover:bg-[#0077B5] transition-all duration-300 p-4"
+            >
               <FaLinkedin />
-            </div>
-            <div className="bg-gray-800 p-4">
+            </a>
+            <a
+              href="https://github.com/nadibahsan10"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 hover:bg-[#181717] transition-all duration-300 p-4"
+            >
               <FaGithub />
-            </div>
-            <div className="bg-gray-800 p-4">
-              <FaInstagram />
-            </div>
-            <div className="bg-gray-800 p-4">
+            </a>
+            <a
+              href="https://www.behance.net/nadibahsan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 hover:bg-[#1769FF] transition-all duration-300 p-4"
+            >
+              <FaBehance />
+            </a>
+            <a
+              href="https://leetcode.com/u/nadibahsan4/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 hover:bg-[#FFA116] transition-all duration-300 p-4"
+            >
               <SiLeetcode />
-            </div>
-            <div className="bg-gray-800 p-4">
-              <img src={logo} alt="" className="h-10" />
-            </div>
+            </a>
+            <a
+              href="https://nadibahsan10-portfolio.vercel.app/"
+              className="bg-gray-800 hover:bg-[#FF6500] transition-all duration-300 p-4"
+            >
+              <img
+                src={logo}
+                alt="Custom Logo"
+                className="h-[20px] sm:h-[24px] md:h-[40px]"
+              />
+            </a>
           </div>
         </div>
       </div>
       <AutoPlay />
-    </>
+    </div>
   );
 };
 

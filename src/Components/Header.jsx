@@ -19,7 +19,7 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <div className="fixed w-full top-10 px-10  z-20">
+    <div className="fixed w-full top-0 py-5 px-5 bg-gradient-to-b from-black to-transparent xl:bg-none z-20">
       <header className="flex items-center justify-between relative">
         <img src={logo} className="h-12" alt="logo" />
 
