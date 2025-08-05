@@ -35,6 +35,7 @@ import vscode from "/vscode.png";
 import figma from "/figma.png";
 import npm from "/npm.png";
 import pixso from "/pixso.png"; // Assuming you have one
+import FadingSection from "./FadingSection";
 
 const backendStack = [
   { name: "Node.js", icon: node },
@@ -82,15 +83,15 @@ const toolsStack = [
 
 const Stack = () => {
   return (
-    <section className="container">
+    <FadingSection className="container py-20">
       <SectionHeader title="My Stack" />
-      <div className="bg-black   py-12 text-white space-y-25 font-sans">
+      <div className="bg-black   text-gray-300 space-y-30 font-sans">
         {/* FRONTEND */}
-        <div className="flex gap-30 items-start">
-          <h2 className="text-gray-300 w-60 text-6xl font-semibold mb-4">
+        <div className="Block lg:flex lg:gap-30 items-start">
+          <h2 className="text-white! w-60  text-6xl font-semibold pb-10">
             FRONTEND
           </h2>
-          <div className="flex flex-wrap gap-10 text-xl">
+          <div className="flex flex-wrap gap-x-12 gap-y-10 text-lg">
             {frontendStack.map((tech, index) => (
               <div key={index} className="flex items-center gap-2">
                 <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
@@ -101,11 +102,11 @@ const Stack = () => {
         </div>
 
         {/* BACKEND */}
-        <div className="flex gap-30">
-          <h2 className="text-gray-300 text-5xl font-semibold mb-4 w-60">
+        <div className="Block lg:flex lg:gap-30 items-start">
+          <h2 className="text-white! w-60  text-6xl font-semibold pb-10">
             BACKEND
           </h2>
-          <div className="flex flex-wrap gap-10 text-xl">
+          <div className="flex flex-wrap gap-x-12 gap-y-10 text-lg">
             {backendStack.map((tech, index) => (
               <div key={index} className="flex items-center gap-2">
                 <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
@@ -116,9 +117,11 @@ const Stack = () => {
         </div>
 
         {/* TOOLS */}
-        <div className="flex gap-30 items-start">
-          <h2 className="text-gray-300 w-60 text-5xl font-semibold">TOOLS</h2>
-          <div className="flex flex-wrap gap-10 text-xl">
+        <div className="Block lg:flex lg:gap-30 items-start">
+          <h2 className="text-white! w-60  text-6xl font-semibold pb-10">
+            TOOLS
+          </h2>
+          <div className="flex flex-wrap gap-x-12 gap-y-10 text-lg">
             {toolsStack.map((tool, index) => (
               <div key={index} className="flex items-center gap-2">
                 <img src={tool.icon} alt={tool.name} className="w-6 h-6" />
@@ -128,7 +131,7 @@ const Stack = () => {
           </div>
         </div>
       </div>
-    </section>
+    </FadingSection>
   );
 };
 

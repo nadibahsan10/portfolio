@@ -19,7 +19,7 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <div className="fixed w-full top-0 py-5 px-5 bg-gradient-to-b from-black to-transparent xl:bg-none z-20">
+    <div className="fixed w-full top-0 py-5 px-5 bg-gradient-to-b from-black to-transparent z-20">
       <header className="flex items-center justify-between relative">
         <img src={logo} className="h-12" alt="logo" />
 
@@ -38,7 +38,7 @@ const Header = () => {
         >
           {showContent && (
             <ul className="mt-15 flex flex-col gap-4 text-white">
-              {["Home", "About Me", "Projects", "My Stack", "Contact"].map(
+              {["Home", "About Me", "My Stack", "Projects", "Contact"].map(
                 (item, index) => (
                   <li
                     key={item}

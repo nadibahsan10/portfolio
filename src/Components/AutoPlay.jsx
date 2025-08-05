@@ -112,7 +112,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full mx-auto mt-15 sm:my-20 md:my-22">
+    <div className="w-full mx-auto mt-15 sm:mt-20 md:mt-40 xl:mt-24">
       <Slider {...settings}>
         {techStack.map((icon, index) => (
           <div key={index} className="   px-2 flex justify-center items-center">
