@@ -8,17 +8,17 @@ const socialLinks = [
   {
     icon: <FaLinkedin />,
     url: "https://www.linkedin.com/in/md-nadib-ahsan-377178179/",
-    hoverColor: "#0077B5",
+    hoverColor: "hover:bg-[#0077B5]",
   },
   {
     icon: <FaGithub />,
     url: "https://github.com/nadibahsan10",
-    hoverColor: "#181717",
+    hoverColor: "hover:bg-[#181717]",
   },
   {
     icon: <MdEmail />,
     url: "mailto:nadibahsan4@gmail.com",
-    hoverColor: "#EA4335",
+    hoverColor: "hover:bg-[#EA4335]",
   },
 ];
 
@@ -34,7 +34,7 @@ const Footer = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`bg-primary transition-all duration-300 p-3 hover:bg-[${link.hoverColor}]`}
+              className={`bg-neutral-800 transition-all duration-300 p-3 ${link.hoverColor}`}
             >
               {link.icon}
             </a>

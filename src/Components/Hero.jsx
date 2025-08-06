@@ -13,22 +13,22 @@ const socialLinks = [
   {
     href: "https://www.linkedin.com/in/md-nadib-ahsan-377178179/",
     icon: <FaLinkedin />,
-    hoverColor: "#0077B5",
+    hoverColor: "hover:bg-[#0077B5]",
   },
   {
     href: "https://github.com/nadibahsan10",
     icon: <FaGithub />,
-    hoverColor: "#181717",
+    hoverColor: "hover:bg-[#181717]",
   },
   {
     href: "https://www.behance.net/nadibahsan",
     icon: <FaBehance />,
-    hoverColor: "#1769FF",
+    hoverColor: " hover:bg-[#1769FF]",
   },
   {
     href: "https://leetcode.com/u/nadibahsan4/",
     icon: <SiLeetcode />,
-    hoverColor: "#FFA116",
+    hoverColor: "hover:bg-[#FFA116]",
   },
   {
     href: "https://nadibahsan10-portfolio.vercel.app/",
@@ -39,7 +39,7 @@ const socialLinks = [
         className="h-[20px] sm:h-[24px] md:h-[40px]"
       />
     ),
-    hoverColor: "#FF6500",
+    hoverColor: "hover:bg-[#FF6500]",
   },
 ];
 const Hero = () => {
@@ -69,7 +69,7 @@ const Hero = () => {
     const intervalId = setInterval(() => {
       replay();
       devReply();
-    }, 3000); // every 2 seconds
+    }, 10000); // every 2 seconds
 
     return () => clearInterval(intervalId); // cleanup on unmount
   }, [replay, devReply]);
@@ -125,7 +125,7 @@ const Hero = () => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`bg-gray-800 transition-all rounded-sm duration-300 p-4 hover:bg-[${item.hoverColor}]`}
+                className={`bg-neutral-800 transition-all rounded-sm duration-300 p-4 ${item.hoverColor}  `}
               >
                 {item.icon}
               </a>
