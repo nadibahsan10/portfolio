@@ -20,7 +20,7 @@ const Loader = () => {
 
     // After 3 seconds, update state and unlock scroll
     const timer = setTimeout(() => {
-      setLoad("top-[-100%]");
+      setLoad("top-[-120%]!");
       document.body.style.overflow = ""; // Unlock scroll
     }, 4000);
 
@@ -32,7 +32,7 @@ const Loader = () => {
   }, []);
   return (
     <div
-      className={`absolute h-screen w-full bg-neutral-900 z-50 flex flex-col ${load} top-0 transition-all duration-1000 items-center justify-center`}
+      className={`absolute h-screen w-full bg-neutral-900 z-50 flex flex-col top-0 ${load}  transition-all duration-1000 items-center justify-center`}
     >
       <svg
         width="386"
