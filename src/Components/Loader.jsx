@@ -20,7 +20,7 @@ const Loader = () => {
 
     // After 3 seconds, update state and unlock scroll
     const timer = setTimeout(() => {
-      setLoad("top-[-120%]!");
+      setLoad("top-[-200%]!");
       document.body.style.overflow = ""; // Unlock scroll
     }, 4000);
 
