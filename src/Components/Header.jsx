@@ -37,7 +37,7 @@ const Header = () => {
           }`}
         >
           {showContent && (
-            <ul className="mt-15 flex flex-col gap-4 text-gray-800 font-semibold">
+            <ul className="mt-15 flex flex-col gap-4 text-white font-semibold">
               {[
                 { label: "Home", id: "home" },
                 { label: "About Me", id: "about" },
