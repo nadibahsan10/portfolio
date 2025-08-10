@@ -8,6 +8,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import ScrollProgressBar from "./Components/Scroll";
 import Loader from "./Components/Loader";
+import Awards from "./Components/Awards";
 const App = () => {
   return (
     <main>
@@ -18,6 +19,7 @@ const App = () => {
       <About />
       <Stack />
       <Projects />
+      <Awards />
       <Contact />
       <Footer />
     </main>

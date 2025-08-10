@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeader from "./SectionHeader";
 import FadingSection from "./FadingSection";
+import { LiaAwardSolid } from "react-icons/lia";
 import { FiExternalLink } from "react-icons/fi";
 
 const projects = [
@@ -8,29 +9,35 @@ const projects = [
     id: 1,
     title: "Telecure",
     stack: ["Nextjs", "Mongodb"],
-    des: "Telecure is a full-stack telemedicine platform designed to connect patients with doctors remotely. It includes features like user authentication, appointment booking, real-time chat, and doctor management. Built with Next.js, MongoDB, and Tailwind CSS, Telecure aims to modernize healthcare access through a responsive, intuitive user interface.",
+    des: "Telecure is a telemedicine platform connecting patients with doctors remotely. It supports authentication, appointment booking, real-time chat, and doctor management, built with Next.js, MongoDB, and Tailwind CSS for a responsive, user-friendly experience.",
     url: "https://github.com/nadibahsan10/telecure",
   },
   {
     id: 2,
     title: "UIU+",
     stack: ["ReactJs", "Expressjs", "MySQL"],
-    des: "UIU+ is a university companion web app built for students of United International University (UIU). It helps students manage courses, view routines, submit assignments, and connect with faculty. Developed using React.js, Express.js, and MySQL, UIU+ streamlines academic workflows into a centralized platform.",
+    des: "UIU+ is a university companion app for United International University students. It streamlines course management, routines, assignments, and faculty connections using React.js, Express.js, and MySQL.",
     url: "https://github.com/nadibahsan10/frontend",
   },
   {
     id: 3,
     title: "UrbanEase",
     stack: ["HTML", "Bootstrap", "PHP", "MySQL"],
-
-    des: "UrbanEase is a city service management application that allows citizens to report urban issues (like potholes, waste, or streetlight outages) and track resolution status. Featuring user roles (admin/user), image uploads, and location tagging, it’s built with MERN stack (MongoDB, Express, React, Node.js) and optimized for mobile responsiveness.",
+    des: "UrbanEase helps citizens report city issues like potholes or outages and track resolutions. It features user roles, image uploads, and location tagging, optimized for mobile responsiveness.",
   },
   {
     id: 4,
     title: "ReaderNeeds",
     stack: ["HTML", "CSS", "PHP", "MySQL"],
-
-    des: "ReaderNeeds is an online book sharing and community platform developed using PHP, MySQL, HTML, and CSS. It allows users to browse, review, and request books, promoting a knowledge-sharing environment. The platform also supports blog content and user interaction to foster a reader community.",
+    awards: true,
+    des: "ReaderNeeds is a book sharing and community platform where users can browse, review, and request books, with blog content and interactive features to connect readers.",
+  },
+  {
+    id: 5,
+    title: "Bytepost",
+    stack: ["React.js", "Node.js", "MySQL"],
+    des: "Bytepost is a content-sharing platform with secure authentication, post creation, image uploads, likes, and comments. Built with Next.js, Node.js, and MongoDB, it focuses on performance and user experience.",
+    url: "https://github.com/nadibahsan10/bytepost",
   },
 ];
 
@@ -38,7 +45,7 @@ const Projects = () => {
   return (
     <FadingSection className="container py-20" id="projects">
       <SectionHeader title="Projects" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div key={project.id} className=" project-card ">
             <div className="back">
@@ -49,8 +56,13 @@ const Projects = () => {
                 Go To Link <FiExternalLink />
               </a>
             </div>
-            <h5 className="text-white flex items-start gap-2 text-2xl">
+            <h5 className="text-white flex items-center gap-2 text-2xl">
               {project.title}
+              {project.awards && (
+                <span className="text-primary ">
+                  <LiaAwardSolid />
+                </span>
+              )}
             </h5>
             <h6 className="text-gray-400 items-center my-2 flex gap-3 text-sm flex-wrap">
               {project.stack.map((tech, i) => (
@@ -62,7 +74,7 @@ const Projects = () => {
                 </React.Fragment>
               ))}
             </h6>
-            <p className="text-gray-300 text-lg leading-[32px]">
+            <p className="text-gray-300 text-base leading-[32px]">
               {project.des}
             </p>
           </div>

@@ -19,7 +19,7 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <div className="fixed w-full top-0 py-5 px-5 bg-gradient-to-b from-black to-transparent z-20">
+    <div className="fixed w-full top-0 py-8 px-8 bg-gradient-to-b from-black to-transparent z-20">
       <header className="flex items-center justify-between relative">
         <img src={logo} className="h-12" alt="logo" />
 
@@ -32,7 +32,7 @@ const Header = () => {
 
         {/* Animated Menu Panel */}
         <div
-          className={`absolute top-[-10px] right-[-10px] rounded-sm  h-80 w-60 px-10  flex justify-center bg-primary overflow-hidden  shadow-xl transition-all duration-600 origin-top z-9 ${
+          className={`absolute top-[-10px] right-[-10px] rounded-sm  h-100 py-10 w-60 px-10  flex justify-center bg-primary overflow-hidden  shadow-xl transition-all duration-600 origin-top z-9 ${
             isOpen ? "opacity-100! scale-100!" : " h-0! w-0! opacity-0 "
           }`}
         >
@@ -43,11 +43,12 @@ const Header = () => {
                 { label: "About Me", id: "about" },
                 { label: "My Stack", id: "stack" },
                 { label: "Projects", id: "projects" },
+                { label: "Awards", id: "awards" },
                 { label: "Contact", id: "contact" },
               ].map((item, index) => (
                 <li
                   key={index}
-                  className={`cursor-pointer text-lg opacity-0 translate-y-4 animate-fadeInUp animation-delay-[${
+                  className={`cursor-pointer text-xl font-semibold opacity-0 translate-y-4 animate-fadeInUp animation-delay-[${
                     index * 150
                   }ms] hover:scale-110 hover:text-black transition-all duration-200`}
                   style={{
